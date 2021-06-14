@@ -1,13 +1,13 @@
 +++
 title = "{{ replace .Name "-" " " | title }}"
 date = "{{ .Date }}"
+# Change date format to 2006-01-02 (can't be automatically done)
 
-#
-# description is optional
-#
-# description = "An optional description for SEO. If not provided, an automatically created summary will be used."
+description = """
+Lorem ipsum
+"""
 
-tags = [{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}"{{ printf "%s" $term }}",{{ end }}{{ end }}]
+tags = [
+    "",
+]
 +++
-
-This is a page about »{{ replace .Name "-" " " | title }}«.
